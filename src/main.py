@@ -1,3 +1,5 @@
+import time
+
 from config.settings import Settings
 from models.credentials import GitHubCredentials
 from services.github_fetcher import GitHubDataFetcher
@@ -12,6 +14,7 @@ def main():
     repo_url = "https://github.com/aris-space/sage-moc"
     
     try:
+        start_time = time.time()
         # Fetch complete repository data
         repo_data = fetcher.fetch_complete_repository_data(repo_url)
 
@@ -32,6 +35,11 @@ def main():
         print(f"Total issue comments: {total_comments}")
         print(f"Total issue events: {total_events}")
         print(f"Total PR reviews: {total_pr_reviews}")
+
+
+        print(f"Time elapsed: {time.time() - start_time:.2f} seconds")
+
+
     except Exception as e:
         print(f"Error: {e}")
 

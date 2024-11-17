@@ -11,6 +11,5 @@ class GitHubUrlParser:
         parts = repo_url.split('/')
         owner = parts[-2]
         repo = parts[-1]
-        
-        print(f"Parsed owner: {owner}, repo: {repo}")
+
         return owner, repo 
