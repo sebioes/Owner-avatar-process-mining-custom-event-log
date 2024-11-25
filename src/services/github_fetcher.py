@@ -81,13 +81,13 @@ class GitHubDataFetcher:
         issues = self.fetch_issues(repo_url)
         pull_requests = self.fetch_pull_requests(repo_url)
 
-                # Enhance issues with comments and events
+        # Enrich issues with comments and events
         for issue in issues:
             issue_number = issue['number']
             issue['comments_data'] = self.fetch_issue_comments(repo_url, issue_number)
             issue['events_data'] = self.fetch_issue_events(repo_url, issue_number)
         
-        # Enhance PRs with reviews
+        # Enrich PRs with reviews
         for pr in pull_requests:
             pr_number = pr['number']
             pr['reviews'] = self.fetch_pr_reviews(repo_url, pr_number)
@@ -95,7 +95,6 @@ class GitHubDataFetcher:
             pr['events_data'] = self.fetch_issue_events(repo_url, pr_number)
         
         return {
-            # 'events': events,
             'issues': issues,
             'pull_requests': pull_requests
         } 

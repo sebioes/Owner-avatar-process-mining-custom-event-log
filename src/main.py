@@ -13,7 +13,7 @@ def main():
     fetcher = GitHubDataFetcher(credentials)
     
     # Example repository
-    repo_url = "https://github.com/sebioes/test-repo-process-mining"
+    repo_url = "https://github.com/aris-space/sage-moc"
     
     try:
         start_time = time.time()
