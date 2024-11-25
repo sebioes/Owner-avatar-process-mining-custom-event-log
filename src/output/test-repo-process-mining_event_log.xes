@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+	<string key="origin" value="csv" />
+	<trace>
+		<string key="concept:name" value="GH_ISSUE_1" />
+		<event>
+			<string key="case_id" value="GH_ISSUE_1" />
+			<string key="activity" value="create_issue" />
+			<date key="timestamp" value="2024-11-17T10:31:36+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="create_issue" />
+			<date key="time:timestamp" value="2024-11-17T10:31:36+00:00" />
+			<int key="@@index" value="0" />
+			<int key="@@case_index" value="0" />
+		</event>
+		<event>
+			<string key="case_id" value="GH_ISSUE_1" />
+			<string key="activity" value="close_issue" />
+			<date key="timestamp" value="2024-11-17T10:38:00+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="close_issue" />
+			<date key="time:timestamp" value="2024-11-17T10:38:00+00:00" />
+			<int key="@@index" value="1" />
+			<int key="@@case_index" value="0" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="GH_ISSUE_2" />
+		<event>
+			<string key="case_id" value="GH_ISSUE_2" />
+			<string key="activity" value="create_issue" />
+			<date key="timestamp" value="2024-11-17T10:38:58+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="create_issue" />
+			<date key="time:timestamp" value="2024-11-17T10:38:58+00:00" />
+			<int key="@@index" value="2" />
+			<int key="@@case_index" value="1" />
+		</event>
+		<event>
+			<string key="case_id" value="GH_ISSUE_2" />
+			<string key="activity" value="close_issue" />
+			<date key="timestamp" value="2024-11-17T10:44:18+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="close_issue" />
+			<date key="time:timestamp" value="2024-11-17T10:44:18+00:00" />
+			<int key="@@index" value="3" />
+			<int key="@@case_index" value="1" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="GH_ISSUE_3" />
+		<event>
+			<string key="case_id" value="GH_ISSUE_3" />
+			<string key="activity" value="create_issue" />
+			<date key="timestamp" value="2024-11-17T10:42:58+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="create_issue" />
+			<date key="time:timestamp" value="2024-11-17T10:42:58+00:00" />
+			<int key="@@index" value="4" />
+			<int key="@@case_index" value="2" />
+		</event>
+		<event>
+			<string key="case_id" value="GH_ISSUE_3" />
+			<string key="activity" value="close_issue" />
+			<date key="timestamp" value="2024-11-17T10:44:17+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="close_issue" />
+			<date key="time:timestamp" value="2024-11-17T10:44:17+00:00" />
+			<int key="@@index" value="5" />
+			<int key="@@case_index" value="2" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="GH_ISSUE_4" />
+		<event>
+			<string key="case_id" value="GH_ISSUE_4" />
+			<string key="activity" value="create_issue" />
+			<date key="timestamp" value="2024-11-25T06:36:53+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="create_issue" />
+			<date key="time:timestamp" value="2024-11-25T06:36:53+00:00" />
+			<int key="@@index" value="6" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="case_id" value="GH_ISSUE_4" />
+			<string key="activity" value="comment" />
+			<date key="timestamp" value="2024-11-25T06:37:01+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="comment" />
+			<date key="time:timestamp" value="2024-11-25T06:37:01+00:00" />
+			<int key="@@index" value="7" />
+			<int key="@@case_index" value="3" />
+		</event>
+		<event>
+			<string key="case_id" value="GH_ISSUE_4" />
+			<string key="activity" value="close_issue" />
+			<date key="timestamp" value="2024-11-25T06:37:12+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="close_issue" />
+			<date key="time:timestamp" value="2024-11-25T06:37:12+00:00" />
+			<int key="@@index" value="8" />
+			<int key="@@case_index" value="3" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="GH_ISSUE_5" />
+		<event>
+			<string key="case_id" value="GH_ISSUE_5" />
+			<string key="activity" value="create_issue" />
+			<date key="timestamp" value="2024-11-25T06:38:13+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="create_issue" />
+			<date key="time:timestamp" value="2024-11-25T06:38:13+00:00" />
+			<int key="@@index" value="9" />
+			<int key="@@case_index" value="4" />
+		</event>
+		<event>
+			<string key="case_id" value="GH_ISSUE_5" />
+			<string key="activity" value="close_issue" />
+			<date key="timestamp" value="2024-11-25T06:38:23+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="issue" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="close_issue" />
+			<date key="time:timestamp" value="2024-11-25T06:38:23+00:00" />
+			<int key="@@index" value="10" />
+			<int key="@@case_index" value="4" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="GH_PR_3" />
+		<event>
+			<string key="case_id" value="GH_PR_3" />
+			<string key="activity" value="create_pull_request" />
+			<date key="timestamp" value="2024-11-17T10:42:58+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="pull_request" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="create_pull_request" />
+			<date key="time:timestamp" value="2024-11-17T10:42:58+00:00" />
+			<int key="@@index" value="11" />
+			<int key="@@case_index" value="5" />
+		</event>
+		<event>
+			<string key="case_id" value="GH_PR_3" />
+			<string key="activity" value="merge_pull_request" />
+			<date key="timestamp" value="2024-11-17T10:44:17+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="pull_request" />
+			<string key="state" value="merged" />
+			<string key="concept:name" value="merge_pull_request" />
+			<date key="time:timestamp" value="2024-11-17T10:44:17+00:00" />
+			<int key="@@index" value="12" />
+			<int key="@@case_index" value="5" />
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="GH_PR_5" />
+		<event>
+			<string key="case_id" value="GH_PR_5" />
+			<string key="activity" value="create_pull_request" />
+			<date key="timestamp" value="2024-11-25T06:38:13+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="pull_request" />
+			<string key="state" value="closed" />
+			<string key="concept:name" value="create_pull_request" />
+			<date key="time:timestamp" value="2024-11-25T06:38:13+00:00" />
+			<int key="@@index" value="13" />
+			<int key="@@case_index" value="6" />
+		</event>
+		<event>
+			<string key="case_id" value="GH_PR_5" />
+			<string key="activity" value="merge_pull_request" />
+			<date key="timestamp" value="2024-11-25T06:38:23+00:00" />
+			<string key="resource" value="sebioes" />
+			<string key="issue_type" value="pull_request" />
+			<string key="state" value="merged" />
+			<string key="concept:name" value="merge_pull_request" />
+			<date key="time:timestamp" value="2024-11-25T06:38:23+00:00" />
+			<int key="@@index" value="14" />
+			<int key="@@case_index" value="6" />
+		</event>
+	</trace>
+</log>

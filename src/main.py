@@ -1,8 +1,10 @@
 import time
+from pathlib import Path
 
 from config.settings import Settings
 from models.credentials import GitHubCredentials
 from services.github_fetcher import GitHubDataFetcher
+from services.event_log_generator import GitHubEventLogGenerator
 
 def main():
     # Load configuration
@@ -11,34 +13,38 @@ def main():
     fetcher = GitHubDataFetcher(credentials)
     
     # Example repository
-    repo_url = "https://github.com/aris-space/sage-moc"
+    repo_url = "https://github.com/sebioes/test-repo-process-mining"
     
     try:
         start_time = time.time()
+        
         # Fetch complete repository data
+        print("Fetching repository data...")
         repo_data = fetcher.fetch_complete_repository_data(repo_url)
-
-        # repo_issues = fetcher.fetch_issues(repo_url)
-        # repo_pull_requests = fetcher.fetch_pull_requests(repo_url)
-
-        # print(f"Fetched {len(repo_issues)} issues")
-        # print(f"Fetched {len(repo_pull_requests)} pull requests")
         
         print(f"Fetched {len(repo_data['issues'])} issues")
         print(f"Fetched {len(repo_data['pull_requests'])} pull requests")
+
+        print(f"\nTime elapsed fetching repository data: {time.time() - start_time:.2f} seconds")
+
+        start_generate_event_log = time.time()
         
-        # Print some statistics about the data
-        total_comments = sum(len(issue.get('comments_data', [])) for issue in repo_data['issues'])
-        total_events = sum(len(issue.get('events_data', [])) for issue in repo_data['issues'])
-        total_pr_reviews = sum(len(pr.get('reviews', [])) for pr in repo_data['pull_requests'])
+        # Generate event log
+        print("\nGenerating event log...")
+        generator = GitHubEventLogGenerator()
         
-        print(f"Total issue comments: {total_comments}")
-        print(f"Total issue events: {total_events}")
-        print(f"Total PR reviews: {total_pr_reviews}")
-
-
-        print(f"Time elapsed: {time.time() - start_time:.2f} seconds")
-
+        # Create output directory if it doesn't exist
+        output_dir = Path("output")
+        output_dir.mkdir(exist_ok=True)
+        
+        # Generate output filename from repository name
+        repo_name = repo_url.split('/')[-1]
+        output_path = output_dir / f"{repo_name}_event_log.xes"
+        
+        generator.generate_event_log(repo_data, str(output_path))
+        print(f"Event log saved to: {output_path}")
+        
+        print(f"\nTime elapsed generating event log: {time.time() - start_generate_event_log:.2f} seconds")
 
     except Exception as e:
         print(f"Error: {e}")

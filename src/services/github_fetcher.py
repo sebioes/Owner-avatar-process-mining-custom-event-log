@@ -16,6 +16,11 @@ class GitHubDataFetcher:
         }
         self.url_parser = GitHubUrlParser()
 
+    def fetch_events(self, repo_url: str) -> List[Dict]:
+        """Fetch all events from a repository"""
+        owner, repo = self.url_parser.parse_repo_url(repo_url)
+        return self._paginated_get(f"/repos/{owner}/{repo}/events")
+
     def fetch_issues(self, repo_url: str, state: str = "all") -> List[Dict]:
         """Fetch all issues from a repository"""
         owner, repo = self.url_parser.parse_repo_url(repo_url)
@@ -71,11 +76,12 @@ class GitHubDataFetcher:
 
     def fetch_complete_repository_data(self, repo_url: str) -> Dict:
         """Fetch all relevant data from a repository"""
-        # Fetch basic issues and PRs
+        # Fetch basic repository data from main endpoints
+        # events = self.fetch_events(repo_url)
         issues = self.fetch_issues(repo_url)
         pull_requests = self.fetch_pull_requests(repo_url)
-        
-        # Enhance issues with comments and events
+
+                # Enhance issues with comments and events
         for issue in issues:
             issue_number = issue['number']
             issue['comments_data'] = self.fetch_issue_comments(repo_url, issue_number)
@@ -89,6 +95,7 @@ class GitHubDataFetcher:
             pr['events_data'] = self.fetch_issue_events(repo_url, pr_number)
         
         return {
+            # 'events': events,
             'issues': issues,
             'pull_requests': pull_requests
         } 
